@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4EA8E"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_support"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@null"
+        android:gravity="center"
+        app:popupTheme="@style/AppTheme" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/amatica_sc_bold"
+            android:gravity="center"
+            android:text="Calculadora IMC"
+            android:textColor="#494747"
+            android:textSize="32sp"
+            tools:layout_editor_absoluteX="16dp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/txvPeso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/amatica_sc_bold"
+        android:text="Peso(kg):"
+        android:textColor="#494747"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/seekPeso"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.422"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgLogo" />
+
+    <TextView
+        android:id="@+id/txvAlturaNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/amatica_sc_bold"
+        android:text="0.0"
+        android:textColor="#494747"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txvAltura"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintStart_toEndOf="@+id/txvAltura"
+        app:layout_constraintTop_toTopOf="@+id/txvAltura"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="276dp"
+        android:layout_height="201dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/txvPeso"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.525"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/orange1" />
+
+    <TextView
+        android:id="@+id/txvAltura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/amatica_sc_bold"
+        android:text="Altura(cm):"
+        android:textColor="#494747"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/seekAltura"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.397"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekPeso" />
+
+    <TextView
+        android:id="@+id/txvPesoNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/amatica_sc_bold"
+        android:text="0.0"
+        android:textColor="#494747"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txvPeso"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.054"
+        app:layout_constraintStart_toEndOf="@+id/txvPeso"
+        app:layout_constraintTop_toTopOf="@+id/txvPeso"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <SeekBar
+        android:id="@+id/seekAltura"
+        android:layout_width="271dp"
+        android:layout_height="59dp"
+        android:scrollbarSize="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnCalcular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvAltura" />
+
+    <Button
+        android:id="@+id/btnCalcular"
+        android:layout_width="272dp"
+        android:layout_height="wrap_content"
+        android:background="#F37121"
+        android:fontFamily="@font/amatica_sc_bold"
+        android:text="CALCULAR"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekAltura" />
+
+    <SeekBar
+        android:id="@+id/seekPeso"
+        android:layout_width="272dp"
+        android:layout_height="57dp"
+        android:scrollbarSize="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/txvAltura"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvPeso" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
